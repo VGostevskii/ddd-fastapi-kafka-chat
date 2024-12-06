@@ -19,6 +19,7 @@ aiokafka = "^0.10.0"
 orjson = "^3.10.0"
 websockets = "^12.0"
 aiojobs = "^1.2.1"
+debugpy = "^1.8.7"
 
 
 [tool.poetry.group.lint.dependencies]
@@ -37,6 +38,11 @@ faker = "^25.0.1"
 requires = ["poetry-core"]
 build-backend = "poetry.core.masonry.api"
 
+
+[tool.pyright]
+venvPath = "/home/slavchina/.cache/pypoetry/virtualenvs"
+venv = "fsatapi-example-xpLShB0C-py3.12"
+typeCheckingMode = "basic"
 
 [tool.isort]
 multi_line_output=3
