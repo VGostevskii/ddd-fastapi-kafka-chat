@@ -1,9 +1,8 @@
+from punq import Container
 from pytest import fixture
 
-from punq import Container
-
-from infra.repositories.messages.base import BaseChatRepository
-from logic.mediator import Mediator
+from infra.repositories.messages.base import BaseChatsRepository
+from logic.mediator.base import Mediator
 from tests.fixtures import init_dummy_container
 
 
@@ -18,5 +17,5 @@ def mediator(container: Container) -> Mediator:
 
 
 @fixture()
-def chat_repository(container: Container) -> BaseChatRepository:
-    return container.resolve(BaseChatRepository)
+def chat_repository(container: Container) -> BaseChatsRepository:
+    return container.resolve(BaseChatsRepository)
